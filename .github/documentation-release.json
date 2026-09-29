@@ -1,0 +1,37 @@
+{
+  "repository": "alexandroit/stackline-unified",
+  "packages": [
+    {
+      "name": "@stackline/unified",
+      "path": "readme.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "unified",
+        "typescript",
+        "process",
+        "parse",
+        "transform",
+        "compile",
+        "stringify",
+        "serialize",
+        "ast",
+        "cst",
+        "syntax",
+        "tree",
+        "content",
+        "rehype",
+        "retext",
+        "remark",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/unified/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/unified/-/unified-1.0.0.tgz",
+      "baselineIntegrity": "sha512-llJ77gUZBVlNP4u+HMcTz9cWODMWvLQ8ynsadZxzoKy8eoncv6OPzigMEbyNVgsybfNQLU3jokM/I/spvc4p+Q==",
+      "expectedSha512": "3fbefd9630a4b6cac0f3c8acf7fd0fd963991d46c9dc8dd934ade3969399fe164eb92375630da9c7f93208ff95b272d2bb9afe326f2018b4fff80b6a4e2d6853",
+      "tag": "docs-stackline-unified-v1.0.1"
+    }
+  ]
+}
