@@ -1,3 +1,19 @@
+# @stackline/unified
+
+Independent maintenance fork of `unified@10.1.2`, preserving its API and published type declarations.
+
+```sh
+npm install @stackline/unified
+# Keep existing imports:
+npm install unified@npm:@stackline/unified@1.0.0
+```
+
+[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-unified/issues) · [Community](https://www.reddit.com/r/Stackline/)
+
+See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+
+## Upstream documentation
+
 # [![unified][logo]][site]
 
 [![Build][build-badge]][build]

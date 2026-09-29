@@ -1,0 +1,22 @@
+{
+  "upstream": "unified",
+  "fork": "@stackline/unified",
+  "repository": "alexandroit/stackline-unified",
+  "upstreamRepository": "unifiedjs/unified",
+  "upstreamVersion": "10.1.2",
+  "sourceCommit": "b9358691047ad72e6390dfc3c3eedc15509e01fa",
+  "upstreamIntegrity": "sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==",
+  "status": "source-ready",
+  "files": {
+    "license": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+    "index.js": "a0876e8e544876c8be3218199588403d29019d0bff04354c2672ce746d8f5bc3",
+    "lib/index.js": "9c6fe8280099c794c1f021385e69318787dd386c98e724d683cc8dc7b547a72a",
+    "package.json": "0adfd4d1062a847fe3600e9e5e16c40039dc9236a559b83eed4a972f10b716ad",
+    "readme.md": "149a66715a15b89dacc3ff3a03eec9e8324ca8b92d2c69cad0a6901db6735001",
+    "index.d.ts": "af79b166f5d41ec2ebae57e9b67df564452b90ae3f0af4cb3c2d8ad5adbfd2db",
+    "lib/index.d.ts": "ddb32ff70b93dbc8ca59ac935d8be166ae7bd6ff36deac099b11afc4b969b33f"
+  },
+  "allowedRuntimeChanges": [],
+  "testCommand": "node --unhandled-rejections=strict --conditions development test/index.js",
+  "strategy": "Published upstream files, including generated declarations, are preserved and checked against SHA-256. Functional tests run against source and the extracted final package. Changes to published runtime files require an explicit reviewed allowlist."
+}
