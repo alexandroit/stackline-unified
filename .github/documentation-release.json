@@ -4,7 +4,7 @@
     {
       "name": "@stackline/unified",
       "path": "readme.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "baselineVersion": "1.0.0",
       "keywords": [
         "stackline",
@@ -30,8 +30,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/unified/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/unified/-/unified-1.0.0.tgz",
       "baselineIntegrity": "sha512-llJ77gUZBVlNP4u+HMcTz9cWODMWvLQ8ynsadZxzoKy8eoncv6OPzigMEbyNVgsybfNQLU3jokM/I/spvc4p+Q==",
-      "expectedSha512": "3fbefd9630a4b6cac0f3c8acf7fd0fd963991d46c9dc8dd934ade3969399fe164eb92375630da9c7f93208ff95b272d2bb9afe326f2018b4fff80b6a4e2d6853",
-      "tag": "docs-stackline-unified-v1.0.1"
+      "expectedSha512": "ac1f0719ddd216f469f12bfec6783f603ec176872e1cae1a1afff5cd424ebd25a42e4dcc1a99308f5dbd71f52f6aeda541c28a022844ae2fe97ae9336af79cf7",
+      "tag": "docs-stackline-unified-v1.0.2"
     }
   ]
 }
