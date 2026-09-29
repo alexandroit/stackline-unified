@@ -1,28 +1,52 @@
 # @stackline/unified
 
-Independent maintenance fork of `unified@10.1.2`, preserving its API and published type declarations.
+> Interface for parsing, inspecting, transforming, and serializing content through syntax trees.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/unified.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/unified)
+[![license](https://img.shields.io/npm/l/@stackline/unified.svg?style=flat-square)](https://github.com/alexandroit/stackline-unified)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-unified-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-unified)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/unified/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/unified/)** | **[npm](https://www.npmjs.com/package/@stackline/unified)** | **[Issues](https://github.com/alexandroit/stackline-unified/issues)** | **[Repository](https://github.com/alexandroit/stackline-unified)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/unified` is the Stackline-maintained distribution of `unified@10.1.2`. It is an independent continuation of [unified](https://github.com/unifiedjs/unified); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/unified@1.0.1` |
+| API target | `unified@10.1.2` |
+| Supported Node.js | `See supported framework requirements` |
+| License | `MIT` |
+| Module type | `module` |
+| Main entry | `index.js` |
+| Types | `index.d.ts` |
+| Runtime dependencies | `bail, vfile, extend, trough, is-buffer, @types/unist, is-plain-obj` |
+
+## Installation
+
+```bash
 npm install @stackline/unified
-# Keep existing imports:
-npm install unified@npm:@stackline/unified@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-unified/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install unified@npm:@stackline/unified
+```
 
-## Upstream documentation
+## Usage and API reference
 
-# [![unified][logo]][site]
+### [![unified][logo]][site]
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 **unified** is an interface for processing text using syntax trees.
 It’s what powers [**remark**][remark] (Markdown), [**retext**][retext] (natural
@@ -51,7 +75,7 @@ Some notable users are [Node.js][], [Vercel][], [Netlify][], [GitHub][],
 
 Support this effort and give back by sponsoring on [OpenCollective][collective]!
 
-<!--lint ignore no-html-->
+
 
 <table>
 <tr valign="middle">
@@ -85,7 +109,7 @@ Support this effort and give back by sponsoring on [OpenCollective][collective]!
 </td>
 <td width="20%" align="center" rowspan="2" colspan="2">
   <a href="https://www.netlify.com">Netlify</a><br><br>
-  <!--OC has a sharper image-->
+  
   <a href="https://www.netlify.com"><img src="https://images.opencollective.com/netlify/4087de2/logo/256.png" width="128"></a>
 </td>
 <td width="10%" align="center">
@@ -127,13 +151,13 @@ Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
 [npm][]:
 
 ```sh
-npm install unified
+npm install @stackline/unified
 ```
 
 ## Use
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeDocument from 'rehype-document'
@@ -306,7 +330,7 @@ The API provided by **unified** allows multiple files to be processed and gives
 access to *metadata* (such as lint messages):
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkPresetLintMarkdownStyleGuide from 'remark-preset-lint-markdown-style-guide'
 import remarkRetext from 'remark-retext'
@@ -441,7 +465,7 @@ There are many ways to pass plugins to `.use()`.
 The below example gives an overview.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 
 unified()
   // Plugin with options:
@@ -483,7 +507,7 @@ The below example shows how `parse` can be used to create a syntax tree from a
 file.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 
 const tree = unified().use(remarkParse).parse('# Hello world!')
@@ -554,7 +578,7 @@ When using TypeScript, cast the type on your side.
 The below example shows how `stringify` can be used to serialize a syntax tree.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import rehypeStringify from 'rehype-stringify'
 import {h} from 'hastscript'
 
@@ -625,7 +649,7 @@ Called with either an error or results.
 The below example shows how `run` can be used to transform a syntax tree.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkReferenceLinks from 'remark-reference-links'
 import {u} from 'unist-builder'
 
@@ -720,7 +744,7 @@ The below example shows how `process` can be used to process a file, whether
 transformers are asynchronous or not, with promises.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeDocument from 'rehype-document'
@@ -775,7 +799,7 @@ The below example shows how `process` can be used to process a file, whether
 transformers are asynchronous or not, with a callback.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkGithub from 'remark-github'
 import remarkStringify from 'remark-stringify'
@@ -847,7 +871,7 @@ The below example shows how `processSync` can be used to process a file, if all
 transformers are synchronous.
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeDocument from 'rehype-document'
@@ -920,7 +944,7 @@ Call the processor first to create a new unfrozen processor.
 The following example show how to get and set information:
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 
 const processor = unified().data('alpha', 'bravo')
 
@@ -956,7 +980,7 @@ The following example, `index.js`, shows how rehype prevents extensions to
 itself:
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'rehype-parse'
 import remarkStringify from 'rehype-stringify'
 
@@ -1048,7 +1072,7 @@ export function move(options = {}) {
 `index.js`:
 
 ```js
-import {unified} from 'unified'
+import {unified} from '@stackline/unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
@@ -1275,7 +1299,7 @@ work on [`ware`][ware], as it was a huge initial inspiration.
 
 [MIT][license] © [Titus Wormer][author]
 
-<!-- Definitions -->
+
 
 [logo]: https://raw.githubusercontent.com/unifiedjs/unified/93862e5/logo.svg?sanitize=true
 
@@ -1464,3 +1488,27 @@ work on [`ware`][ware], as it was a huge initial inspiration.
 [facebook]: https://www.facebook.com
 
 [google]: https://www.google.com
+
+## Credits and original authors
+
+- Original project: [unified](https://github.com/unifiedjs/unified).
+- Titus Wormer.
+- Junyoung Choi.
+- Hernan Rajchert.
+- Christian Murphy.
+- Vse Mozhet Byt.
+- Richard Littauer.
+- Copyright (c) 2015 Titus Wormer <tituswormer@gmail.com>.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
